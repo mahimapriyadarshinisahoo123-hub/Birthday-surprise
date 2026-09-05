@@ -2,176 +2,268 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title> Sweety Singh 🫶🏻✨️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Sweety Singh 🎀</title>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
+*{
+  box-sizing:border-box;
+}
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
   margin:0;
-  background:#f7dce8;
-  color:#5b3549;
-  font-family:'DM Sans',sans-serif;
-  overflow-x:hidden;
+  font-family:Arial,sans-serif;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #fffaf7 0,
+      #fffaf7 34px,
+      #f5e4e9 35px
+    );
+  color:#713d54;
 }
-button{font:inherit}
-.screen{
+
+main{
+  width:100%;
+  max-width:650px;
+  margin:auto;
+  padding:20px;
+}
+
+.section{
   min-height:100vh;
-  min-height:100dvh;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:22px;
+  animation:fade .5s ease;
 }
+
+.hidden{
+  display:none !important;
+}
+
 .card{
-  width:min(94vw,560px);
-  min-height:88vh;
-  background:#fffaf7;
-  border-radius:32px;
-  box-shadow:0 18px 55px rgba(111,53,79,.18);
-  position:relative;
-  overflow:hidden;
-  padding:30px 22px 42px;
+  width:100%;
+  background:rgba(255,255,255,.92);
+  padding:25px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 10px 35px rgba(80,40,60,.12);
 }
-.paper{
-  background:
-    linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),
-    repeating-linear-gradient(0deg,#fffaf7 0,#fffaf7 34px,#f5e4e9 35px);
-}
+
 h1,h2{
   color:#b83268;
   margin:10px 0;
 }
-h1{font-size:clamp(34px,9vw,55px);line-height:1.05}
-h2{font-size:32px}
-p{line-height:1.6}
-.script{font-family:'Caveat',cursive}
-.subtitle{font-size:17px;color:#8c6173}
-.hint{font-size:14px;color:#a6788c}
-.primary{
+
+h1{
+  font-size:clamp(34px,9vw,55px);
+  line-height:1.05;
+}
+
+h2{
+  font-size:32px;
+}
+
+p{
+  line-height:1.6;
+}
+
+.script{
+  font-family:cursive;
+}
+
+.subtitle{
+  font-size:17px;
+  color:#8c6173;
+}
+
+.hint{
+  font-size:14px;
+  color:#a6788c;
+}
+
+.primary,
+.secondary{
   border:0;
-  background:#b83268;
-  color:white;
-  padding:14px 24px;
+  padding:13px 22px;
   border-radius:999px;
   font-weight:700;
-  box-shadow:0 8px 18px rgba(184,50,104,.25);
   cursor:pointer;
+  margin:6px;
 }
+
+.primary{
+  background:#b83268;
+  color:white;
+  box-shadow:0 8px 18px rgba(184,50,104,.25);
+}
+
 .secondary{
   border:2px solid #d58aaa;
   background:#fff4f8;
   color:#9f3e69;
-  padding:12px 20px;
-  border-radius:999px;
-  font-weight:700;
-  cursor:pointer;
 }
-.hidden{display:none!important}
 
-/* opening */
-.bow{font-size:55px;animation:float 2.5s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-8px) rotate(3deg)}}
+.bow{
+  font-size:60px;
+  animation:float 2.5s ease-in-out infinite;
+}
 
-/* balloons */
+/* BALLOONS */
+
 .balloon-area{
   height:520px;
   position:relative;
-  margin-top:5px;
+  margin-top:10px;
 }
+
 .balloon{
-  width:82px;height:100px;
+  width:82px;
+  height:100px;
   border-radius:50% 50% 46% 46%;
   position:absolute;
   cursor:pointer;
   touch-action:manipulation;
-  transition:transform .22s,opacity .22s;
-  box-shadow:inset -11px -12px 20px rgba(0,0,0,.10),inset 8px 8px 12px rgba(255,255,255,.25);
-  z-index:2;
+  transition:.25s;
+  box-shadow:
+    inset -11px -12px 20px rgba(0,0,0,.10),
+    inset 8px 8px 12px rgba(255,255,255,.25);
 }
-.balloon:before{
-  content:"";
-  position:absolute;
-  width:20px;height:28px;
-  background:rgba(255,255,255,.42);
-  border-radius:50%;
-  left:17px;top:16px;
-  transform:rotate(35deg);
-}
+
 .balloon:after{
   content:"";
   position:absolute;
-  width:2px;height:145px;
+  width:2px;
+  height:145px;
   background:#8b7780;
-  left:50%;top:98px;
+  left:50%;
+  top:98px;
 }
+
 .balloon .tag{
   position:absolute;
-  left:50%;top:42%;
+  left:50%;
+  top:42%;
   transform:translate(-50%,-50%);
-  color:white;font-size:11px;font-weight:700;
-  text-shadow:0 1px 3px rgba(0,0,0,.25);
+  color:white;
+  font-size:11px;
+  font-weight:700;
   white-space:nowrap;
 }
+
 .balloon.pop{
-  transform:scale(1.45) rotate(12deg);
+  transform:scale(1.4) rotate(12deg);
   opacity:0;
   pointer-events:none;
 }
-.b1{left:7%;top:8%;background:#dc8eb3}
-.b2{right:8%;top:15%;background:#91b9cf}
-.b3{left:27%;top:43%;background:#b99bce}
-.b4{right:25%;top:49%;background:#e7b46e}
-.b5{left:4%;bottom:7%;background:#b8d5c4}
-.b6{right:5%;bottom:5%;background:#e0a3a8}
+
+.b1{
+  left:7%;
+  top:8%;
+  background:#dc8eb3;
+}
+
+.b2{
+  right:8%;
+  top:15%;
+  background:#91b9cf;
+}
+
+.b3{
+  left:27%;
+  top:43%;
+  background:#b99bce;
+}
+
+.b4{
+  right:25%;
+  top:49%;
+  background:#e7b46e;
+}
+
+.b5{
+  left:4%;
+  bottom:7%;
+  background:#b8d5c4;
+}
 
 .reveal{
-  margin:10px auto;
-  max-width:450px;
-  padding:17px;
+  margin:12px auto;
+  padding:16px;
   background:#fde8f1;
   border:2px dashed #d78cab;
   border-radius:20px;
   animation:rise .45s ease;
 }
-@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
-/* gallery */
+/* GALLERY */
+
 .gallery{
   display:grid;
   grid-template-columns:repeat(2,1fr);
   gap:13px;
   margin:20px 0;
 }
+
 .polaroid{
   background:white;
   padding:8px 8px 28px;
   box-shadow:0 6px 18px rgba(80,40,60,.12);
   transform:rotate(-2deg);
 }
-.polaroid:nth-child(even){transform:rotate(2deg)}
-.photo-placeholder{
-  aspect-ratio:1/1;
-  border-radius:4px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:linear-gradient(135deg,#f5cbdc,#d9c9e8);
-  color:#7c5064;
-  font-weight:700;
+
+.polaroid:nth-child(even){
+  transform:rotate(2deg);
 }
-.caption{font-family:'Caveat',cursive;font-size:21px;margin-top:5px}
 
-/* videos */
-.video-gallery{display:flex;flex-direction:column;gap:18px;margin:20px 0}
-.video-card{background:#fff;padding:10px 10px 14px;border-radius:18px;box-shadow:0 6px 18px rgba(80,40,60,.12)}
-.video-card video{width:100%;display:block;max-height:430px;background:#ead5df;border-radius:12px}
-.video-caption{font-family:'Caveat',cursive;font-size:23px;margin-top:7px;text-align:center}
+.photo{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  display:block;
+  border-radius:4px;
+}
 
-/* masti */
+.caption{
+  font-family:cursive;
+  font-size:21px;
+  margin-top:7px;
+}
+
+/* VIDEOS */
+
+.video-gallery{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  margin:20px 0;
+}
+
+.video-card{
+  background:#fff;
+  padding:10px 10px 14px;
+  border-radius:18px;
+  box-shadow:0 6px 18px rgba(80,40,60,.12);
+}
+
+.video-card video{
+  width:100%;
+  display:block;
+  max-height:430px;
+  background:#ead5df;
+  border-radius:12px;
+}
+
+.video-caption{
+  font-family:cursive;
+  font-size:22px;
+  margin-top:7px;
+}
+
+/* MASTI */
+
 .joke{
   text-align:left;
   background:#fff1f5;
@@ -180,402 +272,647 @@ p{line-height:1.6}
   margin:12px 0;
   border-left:5px solid #d7799f;
 }
-.joke b{color:#b83268}
 
-/* letter */
+.joke b{
+  color:#b83268;
+}
+
+/* LETTER */
+
 .letter{
   background:#fffdf7;
-  border:1px solid #e5d4bd;
-  border-radius:8px;
-  padding:26px 22px;
+  padding:25px;
+  border-radius:18px;
   text-align:left;
-  box-shadow:0 8px 20px rgba(90,50,50,.10);
-  background-image:repeating-linear-gradient(0deg,transparent 0,transparent 31px,#eadfd6 32px);
+  line-height:1.8;
+  box-shadow:0 5px 20px rgba(80,40,60,.10);
 }
-.letter p{font-family:'Caveat',cursive;font-size:25px;line-height:1.28;margin:0 0 15px}
 
-/* quiz */
-.choice{
-  width:100%;
-  margin:8px 0;
-  border:2px solid #efc8d8;
-  background:#fff7fa;
-  padding:13px;
-  border-radius:15px;
-  color:#713d54;
-  cursor:pointer;
+/* CAKE */
+
+.cake-wrap{
+  height:360px;
+  position:relative;
+  margin-top:10px;
 }
-.choice:active{transform:scale(.98)}
 
-/* cake */
-.cake-wrap{height:360px;position:relative;margin-top:10px}
 .cake{
   position:absolute;
-  left:50%;top:125px;
+  left:50%;
+  top:125px;
   transform:translateX(-50%);
-  width:260px;height:145px;
+  width:260px;
+  height:145px;
   background:#f5b8cf;
   border-radius:20px 20px 28px 28px;
   border:4px solid #c87b9e;
-  box-shadow:0 10px 20px rgba(100,40,70,.12);
 }
+
 .cake:before{
   content:"";
   position:absolute;
-  left:-8px;right:-8px;top:48px;
-  height:48px;background:#ffe9f1;border-radius:50%;
+  left:-8px;
+  right:-8px;
+  top:48px;
+  height:48px;
+  background:#ffe9f1;
+  border-radius:50%;
   border:3px solid #d18aa9;
 }
+
 .candle{
   position:absolute;
-  top:-68px;width:16px;height:70px;
-  background:#f0cf7d;border-radius:5px;
+  top:-68px;
+  width:16px;
+  height:70px;
+  background:#f0cf7d;
+  border-radius:5px;
 }
-.candle:nth-child(1){left:55px}.candle:nth-child(2){left:122px}.candle:nth-child(3){right:55px}
+
+.candle:nth-child(1){
+  left:55px;
+}
+
+.candle:nth-child(2){
+  left:122px;
+}
+
+.candle:nth-child(3){
+  right:55px;
+}
+
 .flame{
   position:absolute;
-  top:-30px;left:-4px;
-  width:24px;height:30px;
+  top:-30px;
+  left:-4px;
+  width:24px;
+  height:30px;
   background:#ffbd52;
-  border-radius:50% 50% 50% 50%;
+  border-radius:50%;
   animation:flicker .35s infinite alternate;
 }
-@keyframes flicker{to{transform:scale(.8) translateY(2px);opacity:.8}}
-.blown .flame{display:none}
 
-/* gift */
-.gift-area{height:420px;position:relative}
-.gift{
-  position:absolute;left:50%;top:95px;transform:translateX(-50%);
-  width:260px;height:190px;background:#d98bb0;
-  border-radius:15px;cursor:pointer;
-  box-shadow:0 15px 30px rgba(100,40,70,.15);
+.blown .flame{
+  display:none;
 }
-.gift .ribbon-v{position:absolute;left:110px;top:0;width:40px;height:100%;background:#f3d27c}
-.gift .ribbon-h{position:absolute;left:0;top:70px;width:100%;height:38px;background:#f3d27c}
+
+/* GIFT */
+
+.gift-area{
+  height:420px;
+  position:relative;
+}
+
+.gift{
+  position:absolute;
+  left:50%;
+  top:95px;
+  transform:translateX(-50%);
+  width:260px;
+  height:190px;
+  background:#d98bb0;
+  border-radius:15px;
+  cursor:pointer;
+}
+
+.ribbon-v{
+  position:absolute;
+  left:110px;
+  top:0;
+  width:40px;
+  height:100%;
+  background:#f3d27c;
+}
+
+.ribbon-h{
+  position:absolute;
+  left:0;
+  top:70px;
+  width:100%;
+  height:38px;
+  background:#f3d27c;
+}
+
 .lid{
-  position:absolute;left:-15px;top:-35px;width:290px;height:55px;
-  background:#c9789f;border-radius:14px;
-  transition:transform .7s;
-  transform-origin:bottom center;
+  position:absolute;
+  left:-15px;
+  top:-35px;
+  width:290px;
+  height:55px;
+  background:#c9789f;
+  border-radius:14px;
+  transition:.7s;
   z-index:2;
 }
-.gift.open .lid{transform:translateY(-100px) rotate(-10deg)}
-.gift-message{
-  position:absolute;left:50%;top:310px;transform:translateX(-50%);
-  width:90%;
+
+.gift.open .lid{
+  transform:translateY(-100px) rotate(-10deg);
 }
 
-/* final */
+.gift-message{
+  margin-top:320px;
+}
+
+/* FINAL */
+
 .final{
   padding:30px 10px;
   text-align:center;
 }
-.heart{font-size:70px;animation:pulse 1.2s infinite}
-@keyframes pulse{50%{transform:scale(1.12)}}
 
-/* navigation */
-.nav{
-  display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
-  margin-top:25px;
+.heart{
+  font-size:70px;
+  animation:pulse 1.2s infinite;
 }
-.section{animation:fade .5s ease}
-@keyframes fade{from{opacity:0}to{opacity:1}}
+
+@keyframes float{
+  50%{
+    transform:translateY(-8px) rotate(3deg);
+  }
+}
+
+@keyframes flicker{
+  to{
+    transform:scale(.8) translateY(2px);
+    opacity:.8;
+  }
+}
+
+@keyframes rise{
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+  to{
+    opacity:1;
+    transform:none;
+  }
+}
+
+@keyframes pulse{
+  50%{
+    transform:scale(1.12);
+  }
+}
+
+@keyframes fade{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@media(max-width:480px){
+  main{
+    padding:12px;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  .balloon-area{
+    height:480px;
+  }
+
+  .gallery{
+    gap:10px;
+  }
+
+  .cake{
+    width:220px;
+  }
+
+  .gift{
+    width:220px;
+  }
+
+  .lid{
+    width:250px;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<main id="app">
+<main>
 
-<!-- ================= OPENING ================= -->
-<section class="screen section" id="opening">
-  <div class="card">
-    <div class="bow">🎀</div>
-    <p class="subtitle">A tiny website made specially for</p>
-    <h1 class="script">For Sweety Singh 🫶🏻✨️</h1>
-    <p>There are balloons, memories, a letter, some nonsense and one final surprise waiting inside.</p>
-    <p class="hint">Take your time. Don't just scroll. Tap things. 👀</p>
-    <button class="primary" onclick="show('balloons')">Let's begin ✨</button>
-  </div>
+<!-- OPENING -->
+
+<section class="section" id="opening">
+<div class="card">
+
+<div class="bow">🎀</div>
+
+<p class="subtitle">A tiny website made specially for</p>
+
+<h1 class="script">For Sweety Singh 🫶🏻✨️</h1>
+
+<p>
+There are balloons, memories, videos, some nonsense
+and one final surprise waiting inside.
+</p>
+
+<p class="hint">
+Don't just scroll. Tap things. 👀
+</p>
+
+<button class="primary" onclick="show('balloons')">
+Let's Begin ✨
+</button>
+
+</div>
 </section>
 
 
-<!-- ================= BALLOONS ================= -->
-<section class="screen section hidden" id="balloons">
-  <div class="card">
-    <h2>🎈 Touch the Balloons</h2>
-    <p class="subtitle">Each balloon is hiding something.</p>
-    <p class="hint">Open all 5 balloons to continue.</p>
+<!-- BALLOONS -->
 
-    <div class="balloon-area">
+<section class="section hidden" id="balloons">
+<div class="card">
 
-      <div class="balloon b1" onclick="pop(this,'First of all… Happy Birthday to the most Chatpata Ladki 💣✌🏻')">
-        <span class="tag">TOUCH ME</span>
-      </div>
-      <div class="balloon b2" onclick="pop(this,'Alert 🚨: Aaj ek Pretty Gurlll 💗 ka birthday hai!<br>Thoda zyada hi pretty banne ki koshish mat karna… already attitude bahut hai. 💅🏻😂')">
-        <span class="tag">OPEN ME</span>
-      </div>
-      <div class="balloon b3" onclick="pop(this,'Congratulations! 🏆<br>Aur ek saal jaldi budhi hone kiliye 😅')">
-        <span class="tag">ME 👀</span>
-      </div>
-      <div class="balloon b4" onclick="pop(this,'Kuch log life mein bina planning ke aa jaate hain…<br>aur phir pata nahi kaise life ka ek important part ban jaate hain. 🥹❤️')">
-        <span class="tag">TAP</span>
-      </div>
-      <div class="balloon b5" onclick="pop(this,'Okay Babe… 💗<br>5 balloons complete! 🎈✨<br>Lekin itni jaldi khush mat ho… abhi asli surprise baaki hai. 😌🎁')">
-        <span class="tag">LAST ONE</span>
-      </div>
+<h2>🎈 Touch the Balloons</h2>
 
-    </div>
+<p class="subtitle">
+Each balloon is hiding something.
+</p>
 
-    <div id="balloonMessage"></div>
+<p class="hint">
+Open all 5 balloons to continue.
+</p>
 
-    <button id="balloonNext" class="primary hidden" onclick="show('memories')">
-      Next surprise 📸
-    </button>
-  </div>
-</section>
+<div class="balloon-area">
 
-
-<!-- ================= MEMORIES ================= -->
-<section class="screen section hidden" id="memories">
-  <div class="card">
-    <h2>📸 Our Little Museum</h2>
-    <p class="subtitle">A collection of questionable decisions and good memories.</p>
-
-    <div class="gallery">
-      <div class="gallery">
-  <div class="polaroid"><img class="photo" src="IMG-20250609-WA0002.jpg" alt="Photo 01"><div class="caption">The beginning ♡</div></div>
-
-  <div class="polaroid"><img class="photo" src="IMG-20260104-WA0224.jpg" alt="Photo 02"><div class="caption">Pretty Gurlll 💗</div></div>
-
-  <div class="polaroid"><img class="photo" src="IMG-20260807-WA0003.jpg" alt="Photo 03"><div class="caption">Pagalpan unlimited 😂</div></div>
-
-  <div class="polaroid"><img class="photo" src="IMG-20260808-WA0036.jpg" alt="Photo 04"><div class="caption">Today's main character ✨️</div></div>
-
-  <div class="polaroid"><img class="photo" src="IMG-20260808-WA0055.jpg" alt="Photo 05"><div class="caption">A memory I'll always keep close ❤️</div></div>
-
-  <div class="polaroid"><img class="photo" src="Snapchat-134943668.jpg" alt="Photo 06"><div class="caption">One for the album 🫶🏻</div></div>
+<div class="balloon b1"
+onclick="pop(this,'First of all… Happy Birthday to the most Chatpata Ladki 💣✌🏻')">
+<span class="tag">TOUCH ME</span>
 </div>
 
-<button class="primary" onclick="show('videos')">Next → Videos 🎥</button>
-      <section class="screen section hidden" id="videos">
-  <div class="card">
-    <h2>🎥 Little Video Memories</h2>
+<div class="balloon b2"
+onclick="pop(this,'Alert 🚨: Aaj ek Pretty Gurlll 💗 ka birthday hai!<br>Thoda zyada pretty banne ki koshish mat karna… already attitude bahut hai. 💅🏻😂')">
+<span class="tag">OPEN ME</span>
+</div>
 
-    <p class="subtitle">Press play… and relive the chaos. 😂❤️</p>
+<div class="balloon b3"
+onclick="pop(this,'Congratulations! 🏆<br>Aur ek saal jaldi budhi hone ke liye 😅')">
+<span class="tag">ME 👀</span>
+</div>
 
-    <div class="video-gallery">
+<div class="balloon b4"
+onclick="pop(this,'Kuch log life mein bina planning ke aa jaate hain…<br>aur phir pata nahi kaise life ka ek important part ban jaate hain. 🥹❤️')">
+<span class="tag">TAP</span>
+</div>
 
-      <div class="video-card">
-        <video controls playsinline preload="metadata" src="VID-20260808-WA0073.mp4"></video>
-        <div class="video-caption">Ajj Iss pagal ka birthday hai 🌞✌🏻</div>
-      </div>
+<div class="balloon b5"
+onclick="pop(this,'Okay Babe… 💗<br>5 balloons complete! 🎈✨<br>Lekin asli surprise abhi baaki hai. 😌🎁')">
+<span class="tag">LAST ONE</span>
+</div>
 
-      <div class="video-card">
-        <video controls playsinline preload="metadata" src="VID-20260808-WA0076.mp4"></video>
-        <div class="video-caption">POV: Hum normal rehne ki koshish kar rahe the 😂</div>
-      </div>
+</div>
 
-      <div class="video-card">
-        <video controls playsinline preload="metadata" src="VID-20260808-WA0080.mp4"></video>
-        <div class="video-caption">Cuteness Overload 🫠</div>
-      </div>
+<div id="balloonMessage"></div>
 
-      <div class="video-card">
-        <video controls playsinline preload="metadata" src="VID-20260808-WA0089.mp4"></video>
-        <div class="video-caption">This one deserves a replay 👀✨</div>
-      </div>
+<button id="balloonNext"
+class="primary hidden"
+onclick="show('memories')">
+Next Surprise 📸
+</button>
 
-    </div>
-
-    <button class="primary" onclick="show('masti')">Continue 😂</button>
-
-  </div>
-      </section>
-    </div>
-
-    <button 
-    </div>
-    <button 
-  </div>
-</section>
-
-<!-- ================= MASTI ================= -->
-<section class="screen section hidden" id="masti">
-  <div class="card">
-    <h2>😂 Friendship Evidence</h2>
-    <p class="subtitle">Things that make absolutely no sense to normal people.</p>
-
-    <div class="joke">
-      <b>01 — The Problem:</b><br>
-      We can turn a 2-minute conversation into a 2-hour discussion.
-    </div>
-
-    <div class="joke">
-      <b>02 — The Talent:</b><br>
-      Making the worst possible decision and then laughing about it.
-    </div>
-
-    <div class="joke">
-      <b>03 — The Rule:</b><br>
-      If one of us says “don't laugh”, the other one immediately laughs.
-    </div>
-
-    <div class="joke">
-      <b>04 — The Reality:</b><br>
-      We have approximately 7 normal photos and 200 completely chaotic ones.
-    </div>
-
-    <div class="joke">
-      <b>05 — Important:</b><br>
-      Nobody else needs to understand the inside jokes. 😂
-    </div>
-
-    <button class="primary" onclick="show('quiz')">One stupid question 👀</button>
-  </div>
+</div>
 </section>
 
 
-<!-- ================= QUIZ ================= -->
-<section class="screen section hidden" id="quiz">
-  <div class="card">
-    <h2>👀 Be Honest</h2>
-    <p>Who is more likely to say:</p>
-    <h3 class="script" style="font-size:30px">“Let's do something stupid.”</h3>
+<!-- MEMORIES -->
 
-    <button class="choice" onclick="quizAnswer('Obviously YOU. 😂')">Me</button>
-    <button class="choice" onclick="quizAnswer('Obviously YOU. 😂')">You</button>
-    <button class="choice" onclick="quizAnswer('Both of us. We are doomed. 😭😂')">Both of us</button>
+<section class="section hidden" id="memories">
+<div class="card">
 
-    <div id="quizResult"></div>
+<h2>📸 Our Little Museum</h2>
 
-    <button id="quizNext" class="primary hidden" onclick="show('letter')">
-      Open the letter 💌
-    </button>
-  </div>
+<p class="subtitle">
+A collection of questionable decisions and good memories.
+</p>
+
+<div class="gallery">
+
+<div class="polaroid">
+<img class="photo"
+src="IMG-20250609-WA0002.jpg"
+alt="Photo 01">
+<div class="caption">The beginning ♡</div>
+</div>
+
+<div class="polaroid">
+<img class="photo"
+src="IMG-20260104-WA0224.jpg"
+alt="Photo 02">
+<div class="caption">Pretty Gurlll 💗</div>
+</div>
+
+<div class="polaroid">
+<img class="photo"
+src="IMG-20260807-WA0003.jpg"
+alt="Photo 03">
+<div class="caption">Pagalpan unlimited 😂</div>
+</div>
+
+<div class="polaroid">
+<img class="photo"
+src="IMG-20260808-WA0036.jpg"
+alt="Photo 04">
+<div class="caption">Today's main character ✨️</div>
+</div>
+
+<div class="polaroid">
+<img class="photo"
+src="IMG-20260808-WA0055.jpg"
+alt="Photo 05">
+<div class="caption">A memory I'll always keep close ❤️</div>
+</div>
+
+<div class="polaroid">
+<img class="photo"
+src="Snapchat-134943668.jpg"
+alt="Photo 06">
+<div class="caption">One for the album 🫶🏻</div>
+</div>
+
+</div>
+
+<button class="primary" onclick="show('videos')">
+Next → Videos 🎥
+</button>
+
+</div>
 </section>
 
 
-<!-- ================= LETTER ================= -->
-<section class="screen section hidden" id="letter">
-  <div class="card paper">
-    <h2>💌 A Letter For You</h2>
-    <p class="hint">Okay... enough nonsense. For a minute.</p>
+<!-- VIDEOS -->
 
-    <div class="letter">
-      <p>Happy Birthday, Bestie! 🎉✨</p>
-      <p>​Sach kahoon toh mujhe samajh nahi aa raha ki shuru kahan se karun... kya likhu??kyuki humari kahani kisi film ki script se kam nahi hai!</p>
-      <p>Ek dusre ko itna achhi tarah samajhna, bina bole ek dusre ki feeling samajh jana—pata hi nahi chala ki kab hum sirf "just friends" se "Best Friend" ban gaye.🤞🏻🌞</p>
-      <p>​Thank you mere har ek pagalpan mein mera sath dene ke liye, mujhe bina kisi judgment ke accept karne ke liye, aur meri life ko itna colorful banane ke liye.😚🫶🏻</p>
-      <p>Tum meri life ke woh person ho jiske bina mera din complete nahi hota.(#Sukoon wala place🙂‍↔️)</p>
-      <p>Tumhare saare sapne sach hon, aur tum hamesha aise hi haste raho. Aur dher sara paisa kamao💸💰</p>
-      <p>​Cheers to more and more crazy memories together!🥳✌🏻</p>
-      <p>​Happy Birthday once again, my gossip partner ! 🥂❤️</p>
-    </div>
+<section class="section hidden" id="videos">
+<div class="card">
 
-    <br>
+<h2>🎥 Little Video Memories</h2>
 
-    <button class="primary" onclick="show('cake')">
-      There is still something left... 🎂
-    </button>
-  </div>
+<p class="subtitle">
+Press play… and relive the chaos. 😂❤️
+</p>
+
+<div class="video-gallery">
+
+<div class="video-card">
+<video controls playsinline preload="metadata"
+src="VID-20260808-WA0073.mp4">
+</video>
+
+<div class="video-caption">
+Ajj iss pagal ka birthday hai 🌞✌🏻
+</div>
+</div>
+
+
+<div class="video-card">
+<video controls playsinline preload="metadata"
+src="VID-20260808-WA0076.mp4">
+</video>
+
+<div class="video-caption">
+POV: Hum normal rehne ki koshish kar rahe the 😂
+</div>
+</div>
+
+
+<div class="video-card">
+<video controls playsinline preload="metadata"
+src="VID-20260808-WA0080.mp4">
+</video>
+
+<div class="video-caption">
+Cuteness Overload 🫠
+</div>
+</div>
+
+
+<div class="video-card">
+<video controls playsinline preload="metadata"
+src="VID-20260808-WA0089.mp4">
+</video>
+
+<div class="video-caption">
+This one deserves a replay 👀✨
+</div>
+</div>
+
+</div>
+
+<button class="primary" onclick="show('masti')">
+Continue 😂
+</button>
+
+</div>
 </section>
 
 
-<!-- ================= CAKE ================= -->
-<section class="screen section hidden" id="cake">
-  <div class="card">
-    <h2>🎂 Make A Wish</h2>
-    <p class="subtitle">Tap the candles.</p>
+<!-- MASTI -->
 
-    <div class="cake-wrap">
+<section class="section hidden" id="masti">
+<div class="card">
 
-      <div class="cake" id="cakeBox">
-        <div class="candle">
-          <div class="flame"></div>
-        </div>
-        <div class="candle">
-          <div class="flame"></div>
-        </div>
-        <div class="candle">
-          <div class="flame"></div>
-        </div>
-      </div>
+<h2>😂 Thoda Masti Ho Jaye</h2>
 
-    </div>
+<div class="joke">
+<b>Fact #1:</b><br>
+Tum normal ho... bas tumhari definition of normal thodi questionable hai. 😂
+</div>
 
-    <button class="primary" onclick="blowCandles()">
-      Tap to blow the candles 💨
-    </button>
+<div class="joke">
+<b>Fact #2:</b><br>
+Tumhare saath boring day naam ki koi cheez exist nahi karti. 😭
+</div>
 
-    <div id="cakeMessage"></div>
+<div class="joke">
+<b>Fact #3:</b><br>
+Attitude free mein milta hai, isliye shayad quantity zyada hai. 💅🏻😂
+</div>
 
-    <button id="cakeNext" class="primary hidden" onclick="show('gift')">
-      Now open the gift 🎁
-    </button>
-  </div>
+<div class="joke">
+<b>Important:</b><br>
+Please birthday ke baad bhi itni hi pagal rehna. 🫶🏻
+</div>
+
+<button class="primary" onclick="show('letter')">
+Okay, serious now 💌
+</button>
+
+</div>
 </section>
 
 
-<!-- ================= GIFT ================= -->
-<section class="screen section hidden" id="gift">
-  <div class="card">
-    <h2>🎁 One Last Surprise...</h2>
-    <p class="subtitle">Okay, maybe not actually the last one.</p>
+<!-- LETTER -->
 
-    <div class="gift-area">
+<section class="section hidden" id="letter">
+<div class="card">
 
-      <div class="gift" id="giftBox" onclick="openGift()">
-        <div class="lid"></div>
-        <div class="ribbon-v"></div>
-        <div class="ribbon-h"></div>
-      </div>
+<h2>💌 A Little Letter</h2>
 
-      <div id="giftMessage" class="gift-message"></div>
+<div class="letter">
 
-    </div>
+<p>
+Dear Sweety,
+</p>
 
-    <button id="giftNext" class="primary hidden" onclick="show('final')">
-      Open the final page 💗
-    </button>
-  </div>
+<p>
+Some people enter our lives without any big plan,
+and somehow they become a very important part of our memories.
+</p>
+
+<p>
+From random conversations to stupid jokes,
+from laughing at absolutely nothing to making memories
+that we'll probably talk about years later —
+I'm genuinely grateful for all of it.
+</p>
+
+<p>
+I hope this new year of your life brings you happiness,
+good people, beautiful memories and lots of reasons to smile.
+</p>
+
+<p>
+Stay the same crazy, funny and lovely person you are.
+And yes... thoda attitude kam karna bhi allowed hai. 😂
+</p>
+
+<p class="script" style="font-size:28px;">
+Happy Birthday, Sweety! 🫶🏻❤️
+</p>
+
+</div>
+
+<button class="primary" onclick="show('cake')">
+There's a Cake 🎂
+</button>
+
+</div>
 </section>
 
 
-<!-- ================= FINAL ================= -->
-<section class="screen section hidden" id="final">
-  <div class="card">
-    <div class="final">
+<!-- CAKE -->
 
-      <div class="heart">💗</div>
+<section class="section hidden" id="cake">
+<div class="card">
 
-      <h1 class="script">Happy Birthday!</h1>
+<h2>🎂 Make a Wish</h2>
 
-      <h2>Sweety Singh 🎂</h2>
+<p class="subtitle">
+Tap the button and blow the candles.
+</p>
 
-      <p>
-        This little corner of the internet was made just for you.
-      </p>
+<div class="cake-wrap">
 
-      <p>
-        Keep smiling.<br>
-        Keep laughing.<br>
-        Keep making ridiculous memories.
-      </p>
+<div class="cake" id="cakeBox">
 
-      <p class="script" style="font-size:30px">
-        Here's to many more chaotic years together. 🫶🏻
-      </p>
+<div class="candle">
+<div class="flame"></div>
+</div>
 
-      <div style="font-size:45px;margin:20px">🎀 📸 🎂 🎁 ✨</div>
+<div class="candle">
+<div class="flame"></div>
+</div>
 
-      <button class="secondary" onclick="show('opening')">
-        Start again ↻
-      </button>
+<div class="candle">
+<div class="flame"></div>
+</div>
 
-    </div>
-  </div>
+</div>
+
+</div>
+
+<button class="primary" onclick="blowCandles()">
+Blow Candles 🕯️
+</button>
+
+<div id="cakeMessage"></div>
+
+<button id="cakeNext"
+class="primary hidden"
+onclick="show('gift')">
+Next Surprise 🎁
+</button>
+
+</div>
+</section>
+
+
+<!-- GIFT -->
+
+<section class="section hidden" id="gift">
+<div class="card">
+
+<h2>🎁 One Last Surprise</h2>
+
+<p class="subtitle">
+Tap the gift box.
+</p>
+
+<div class="gift-area">
+
+<div class="gift" id="giftBox" onclick="openGift()">
+
+<div class="lid"></div>
+
+<div class="ribbon-v"></div>
+
+<div class="ribbon-h"></div>
+
+</div>
+
+<div class="gift-message" id="giftMessage"></div>
+
+</div>
+
+<button id="finalButton"
+class="primary hidden"
+onclick="show('final')">
+Open Final Message ✨
+</button>
+
+</div>
+</section>
+
+
+<!-- FINAL -->
+
+<section class="section hidden" id="final">
+<div class="card final">
+
+<div class="heart">❤️</div>
+
+<h1 class="script">
+Happy Birthday, Sweety! 🎂
+</h1>
+
+<p>
+This little corner of the internet was made just for you.
+</p>
+
+<p>
+Keep smiling.<br>
+Keep laughing.<br>
+Keep making ridiculous memories.
+</p>
+
+<p class="script" style="font-size:30px;">
+Here's to many more chaotic years together. 🫶🏻
+</p>
+
+<div style="font-size:45px;margin:20px;">
+🎀 📸 🎂 🎁 ✨
+</div>
+
+<button class="secondary" onclick="show('opening')">
+Start Again ↻
+</button>
+
+</div>
 </section>
 
 </main>
@@ -583,96 +920,80 @@ p{line-height:1.6}
 
 <script>
 
-/* ================= NAVIGATION ================= */
+let poppedCount = 0;
 
 function show(id){
 
-  document.querySelectorAll('.section').forEach(section=>{
-    section.classList.add('hidden');
-  });
+document.querySelectorAll(".section").forEach(section=>{
+section.classList.add("hidden");
+});
 
-  document.getElementById(id).classList.remove('hidden');
+document.getElementById(id).classList.remove("hidden");
 
-  window.scrollTo({
-    top:0,
-    behavior:'smooth'
-  });
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
 }
 
-
-/* ================= BALLOONS ================= */
-
-let poppedCount = 0;
 
 function pop(balloon,message){
 
-  if(balloon.classList.contains('pop')) return;
+if(balloon.classList.contains("pop")) return;
 
-  balloon.classList.add('pop');
+balloon.classList.add("pop");
 
-  poppedCount++;
+poppedCount++;
 
-  const box = document.getElementById('balloonMessage');
+const box=document.getElementById("balloonMessage");
 
-  const newMessage = document.createElement('div');
+const newMessage=document.createElement("div");
 
-  newMessage.className = 'reveal';
+newMessage.className="reveal";
 
-  newMessage.innerHTML = message;
+newMessage.innerHTML=message;
 
-  box.appendChild(newMessage);
+box.appendChild(newMessage);
 
-  if(poppedCount === 5){
+if(poppedCount===5){
 
-    setTimeout(()=>{
-      document.getElementById('balloonNext').classList.remove('hidden');
-    },500);
-
-  }
-
-}
-
-
-/* ================= QUIZ ================= */
-
-function quizAnswer(answer){
-
-  document.getElementById('quizResult').innerHTML =
-    '<div class="reveal">' + answer + '</div>';
-
-  document.getElementById('quizNext').classList.remove('hidden');
+setTimeout(()=>{
+document.getElementById("balloonNext")
+.classList.remove("hidden");
+},500);
 
 }
 
+}
 
-/* ================= CAKE ================= */
 
 function blowCandles(){
 
-  document.getElementById('cakeBox').classList.add('blown');
+document.getElementById("cakeBox")
+.classList.add("blown");
 
-  document.getElementById('cakeMessage').innerHTML =
-    '<div class="reveal">✨ Wish made! I hope it comes true. ✨</div>';
+document.getElementById("cakeMessage")
+.innerHTML=
+'<div class="reveal">✨ Wish made! I hope it comes true. ✨</div>';
 
-  document.getElementById('cakeNext').classList.remove('hidden');
+document.getElementById("cakeNext")
+.classList.remove("hidden");
 
 }
 
 
-/* ================= GIFT ================= */
-
 function openGift(){
 
-  const gift = document.getElementById('giftBox');
+document.getElementById("giftBox")
+.classList.add("open");
 
-  if(gift.classList.contains('open')) return;
+document.getElementById("giftMessage")
+.innerHTML=
+'<div class="reveal">🎉 Surprise! You made it till the end! ❤️</div>';
 
-  gift.classList.add('open');
-
-  document.getElementById('giftMessage').innerHTML =
-    '<div class="reveal">🎉 SURPRISE! You actually opened it! ❤️</div>';
-
-  document.getElementById('giftNext').classList.remove('hidden');
+document.getElementById("finalButton")
+.classList.remove("hidden");
 
 }
 
@@ -680,3 +1001,4 @@ function openGift(){
 
 </body>
 </html>
+
